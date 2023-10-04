@@ -18,6 +18,12 @@
         <module>web</module>
     </modules>
 
+    <scm>
+        <connection>scm:git:git@github.com:LighterPro/first-maven.git</connection>
+        <developerConnection>scm:git:git@github.com:LighterPro/first-maven.git</developerConnection>
+        <url>https://github.com/LighterPro/first-maven</url>
+    </scm>
+
     <distributionManagement>
         <snapshotRepository>
             <id>local-nexus</id>
@@ -37,7 +43,6 @@
         <maven.compiler.target>21</maven.compiler.target>
         <maven.plugin.validation>VERBOSE</maven.plugin.validation>
         <helloText>"helloText from properties"</helloText>
-
         <spring.version>6.0.12</spring.version>
     </properties>
 
@@ -102,6 +107,11 @@
         </resources>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>3.0.1</version>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
